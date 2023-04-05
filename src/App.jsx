@@ -8,6 +8,6 @@ function App() {
       <TheLayout />
     </BrowserRouter>
   )
-}
+};
 
 export default App
