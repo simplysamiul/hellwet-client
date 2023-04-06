@@ -13,7 +13,7 @@ const Body = () => {
     <Suspense fallback={<Preloader />}>
         <Routes>
           <Route path='/' element={<Dashboard />}>
-              <Route path='alltask' element={<ShowAllTasks />} />
+              <Route index element={<ShowAllTasks />} />
               <Route path='addtask' element={<CreateTask />} />
           </Route>
       </Routes>

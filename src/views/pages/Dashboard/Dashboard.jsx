@@ -27,7 +27,7 @@ const Dashboard = () => {
         <ul className="p-4 w-80 text-white bg-primary lg:bg-opacity-80 flex flex-col justify-between">
           <div className=''>
           {/* <!-- Sidebar content here --> */}
-          <Link to="/alltask"><li className='bg-secondary rounded-lg font-Poppins font-semibold text-lg mt-4 p-4 cursor-pointer hover:bg-hover'>All Task</li></Link>
+          <Link to="/"><li className='bg-secondary rounded-lg font-Poppins font-semibold text-lg mt-4 p-4 cursor-pointer hover:bg-hover'>All Task</li></Link>
           <Link to="/addtask"><li className='bg-secondary rounded-lg font-Poppins font-semibold text-lg mt-4 p-4 cursor-pointer hover:bg-hover'>Create Task</li></Link>
         </div>
         </ul>
