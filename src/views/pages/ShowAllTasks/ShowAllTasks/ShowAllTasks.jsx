@@ -22,7 +22,7 @@ const ShowAllTasks = () => {
         setLoading(false)
         console.log(err?.message)
       })
-  }, []);
+  }, [tasks]);
 
 
   return (
@@ -42,7 +42,6 @@ const ShowAllTasks = () => {
         {
           userTasks.map((task, index) => {
             const { _id, title, email } = task;
-            console.log(task)
             return (
               <tbody key={_id}>
                 {/* row 1 */}

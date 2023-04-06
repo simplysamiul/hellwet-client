@@ -3,6 +3,7 @@ import { AuthContext } from '../../../context/AuthProvider';
 import { useForm } from 'react-hook-form';
 import TaskService from '../../../api/Task.Service';
 import { toast } from 'react-hot-toast';
+import Loader from '../../custome/Loader';
 
 const CreateTask = () => {
   const { user } = useContext(AuthContext);
@@ -78,7 +79,7 @@ const CreateTask = () => {
             {...register("description", { required: true})}
           />
           </div>
-          {loading ? <h1>Loading...</h1> :<input type="submit" className='w-full max-w-xs btn bg-secondary' />}
+          {loading ? <Loader />:<input type="submit" className='w-full max-w-xs btn bg-secondary' />}
         </form>
       </div>
     </div>
