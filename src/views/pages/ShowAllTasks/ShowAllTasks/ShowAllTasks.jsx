@@ -7,11 +7,9 @@ import DeleteModal from '../../../components/crudModal/DeleteModal'
 import DetailsModal from '../../../components/crudModal/DetailsModal';
 
 const ShowAllTasks = () => {
-  const { user } = useContext(AuthContext);
   const [tasks, setTasks] = useState([]);
   const [selectedTask, setSelectedTask] = useState({});
   const [loading, setLoading] = useState(false);
-  const userTasks = tasks.filter((item) => item?.email === user?.email);
   useEffect(() => {
     setLoading(true);
     TaskService.getAllTasks()
@@ -40,7 +38,7 @@ const ShowAllTasks = () => {
       </tr>
         </thead>
         {
-          userTasks.map((task, index) => {
+          tasks.map((task, index) => {
             const { _id, title, email } = task;
             return (
               <tbody key={_id}>

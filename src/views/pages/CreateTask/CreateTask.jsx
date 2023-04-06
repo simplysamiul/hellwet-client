@@ -13,7 +13,7 @@ const CreateTask = () => {
     setLoading(true);
     const userInfo = {
       title: data.title,
-      email: user?.email,
+      email: data.email,
       description: data.description,
       dueDate: data.duedate
     }
@@ -63,8 +63,7 @@ const CreateTask = () => {
             </label>
             <input
             type="email"
-            defaultValue={user?.email}
-            disabled
+            {...register("email", { required: true})}
             className="input w-full max-w-xs"
           />
           </div>

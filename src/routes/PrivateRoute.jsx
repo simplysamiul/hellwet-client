@@ -1,12 +1,12 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from 'react'
-import PreLoader from "../custom/PreLoader";
+import Preloader from "../views/custome/Preloader";
 
 const PrivateRoute = ({ children }) => {
          const { user, loading } = useContext(AuthContext);
          const location = useLocation();
     if(isLoading){
-        return <PreLoader />
+        return <Preloader />
     }
 
  return (

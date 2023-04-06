@@ -12,11 +12,10 @@ const Body = () => {
   return (
     <Suspense fallback={<Preloader />}>
         <Routes>
-        <Route path="/" element={<Dashboard />}>
-          <Route path='alltask' element={<ShowAllTasks />} />
-          <Route path='addtask' element={<CreateTask />} />
-        </Route>
-        <Route path='/login' element={<Login />} />
+          <Route path='/' element={<Dashboard />}>
+              <Route path='alltask' element={<ShowAllTasks />} />
+              <Route path='addtask' element={<CreateTask />} />
+          </Route>
       </Routes>
     </Suspense>
   )
