@@ -1,13 +1,16 @@
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Dashboard from '../views/pages/Dashboard/Dashboard'
-import CreateTask from '../views/pages/CreateTask/CreateTask'
-import ShowAllTasks from '../views/pages/ShowAllTasks/ShowAllTasks/ShowAllTasks'
 import Login from '../views/pages/Login/Login'
+import Preloader from '../views/custome/Preloader'
+
+// code spliting
+const Dashboard = React.lazy(() => import('../views/pages/Dashboard/Dashboard'));
+const CreateTask = React.lazy(() => import('../views/pages/CreateTask/CreateTask'));
+const ShowAllTasks = React.lazy(() => import('../views/pages/ShowAllTasks/ShowAllTasks/ShowAllTasks'));
 
 const Body = () => {
   return (
-    <Suspense fallback={<h2>Loading....</h2>}>
+    <Suspense fallback={<Preloader />}>
         <Routes>
         <Route path="/" element={<Dashboard />}>
           <Route path='alltask' element={<ShowAllTasks />} />

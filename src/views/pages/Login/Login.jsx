@@ -17,7 +17,7 @@ const Login = () => {
 
   return (
     <div className='h-screen flex items-center justify-center'>
-      <div onClick={handelGoogleSignIn} className='w-72 lg:w-96 flex items-center justify-center rounded-lg border-2 border-black font-serif cursor-pointer py-2 hover:bg-slate-200'>
+      <div onClick={handelGoogleSignIn} className='w-72 lg:w-96 flex items-center justify-center rounded-lg border-2 border-white font-serif cursor-pointer py-2'>
         <img className='w-6 mx-4' src={googleIcon} alt='googleIcon' />
         <p>CONTINUE WITH GOOGLE</p>
       </div>
