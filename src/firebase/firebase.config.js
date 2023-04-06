@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBZWWUWK6NpIIFNJ4cBoNFp8LlXCNZo2Vk",
-  authDomain: "helwett-task.firebaseapp.com",
-  projectId: "helwett-task",
-  storageBucket: "helwett-task.appspot.com",
-  messagingSenderId: "873813620815",
-  appId: "1:873813620815:web:9c4f4f409d3983cdb9523a"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

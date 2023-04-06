@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Task = () => {
+const Task = ({ task }) => {
+  console.log(task)
   return (
-    <div>
-      Singel Task
-    </div>
+    <div className="overflow-x-auto">
+ 
+</div>
   )
 }
 
